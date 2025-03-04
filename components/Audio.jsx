@@ -40,6 +40,7 @@ const Dictaphone = () => {
       <button onClick={() => stop()}>Stop</button>
       <button onClick={reset}>Reset</button>
       <p>{transcript}</p>
+      <button onClick={() => start()}>ononononono</button>
     </div>
   );
 };
