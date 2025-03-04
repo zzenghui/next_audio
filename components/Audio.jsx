@@ -18,7 +18,7 @@ const Dictaphone = () => {
   }
   //   浏览器不支持
   if (!browserSupportsSpeechRecognition) {
-    return <span>Browser doesn't support speech recognition.</span>;
+    return <span>浏览器不支持</span>;
   }
   const start = () => {
     SpeechRecognition.startListening({ continuous: true, language: "zh-CN" });
