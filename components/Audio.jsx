@@ -21,7 +21,11 @@ const Dictaphone = () => {
     return <span>浏览器不支持</span>;
   }
   const start = () => {
-    SpeechRecognition.startListening({ continuous: true, language: "zh-CN" });
+    if (isMicrophoneAvailable) {
+      SpeechRecognition.startListening({ continuous: true, language: "zh-CN" });
+    } else {
+      alert("出错了");
+    }
   };
   const stop = () => {
     SpeechRecognition.stopListening();
